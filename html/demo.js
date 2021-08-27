@@ -26,10 +26,12 @@ function startConnect() {
 	//client.username_pw_set("usr01", "usr01");
 	
     // Connect the client, if successful, call onConnect function
+    // useSSL   : true <-- for SSL connection, if not, remove it
     client.connect({ 
         onSuccess: onConnect,
-		userName : usr,
-		password : pwd
+		userName    : usr,
+		password    : pwd,
+        useSSL      : true
     });
 }
 
