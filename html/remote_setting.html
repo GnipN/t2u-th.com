@@ -10,10 +10,10 @@
    </head>
    <body>
       <div class="wrapper">
-         <h1>mqtt-demo</h1>
+         <h1>Remote Setting: การตั้งค่า sensor จากเว็บ (สมมุติว่าบ่อปลา)</h1>
          <form id="connection-information-form">
-            <b>Hostname or IP Address:</b> 
-            <input id="host" type="text" name="host" value="34.67.161.xxx"><br>
+            <!-- <b>Hostname or IP Address:</b> 
+             <input id="host" type="text" name="host" value="34.67.161.xxx"><br> 
             <b>Port:</b>
             <input id="port" type="text" name="port" value="9001"><br>
 			<b>Username:</b>
@@ -29,6 +29,21 @@
             <b>Publish Message:</b>
             <input id="pubMsg" type="text" name="pubMsg" value="Hello from Web"><br>
 			<input type="button" onclick="publish()" value="Publish">
+               -->
+         <input type="hidden" id="host" name="host" value="35.227.145.30">
+         <input type="hidden" id="port" name="port" value="9001">
+         <input type="hidden" id="usr" name="usr" value="usr01">
+         <input type="hidden" id="pwd" name="pwd" value="1234">
+         <b>ID อุปกรณ์:</b>
+         <input id="deviceId" type="text" name="deviceId" value="pond001"><br>
+         <b>ค่าที่ต้องการตั้ง :</b>
+         <select name="set_param" id="set_param">
+            <option value="f_weight">น้ำหนักอาหาร</option>
+            <option value="f_time">จำนวนครั้งการให้อาหารต่อวัน</option>
+          </select>
+          <b>ค่าใหม่ :</b>
+         <input id="new_val" type="text" name="new_val" value=""><br>
+         <input type="button" onclick="publish()" value="Publish">
          </form>
          <div id="messages"></div>
       </div>
