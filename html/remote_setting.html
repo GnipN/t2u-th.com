@@ -15,7 +15,7 @@
    </head>
    <body>
       <div class="wrapper">
-         <h1>Remote Setting: การตั้งค่า sensor จากเว็บ (สมมุติว่าบ่อปลา)</h1>
+         <h1>Remote Setting: การตั้งค่า sensor จากเว็บ <br>(สมมุติว่าบ่อปลา)</h1>
          <form id="connection-information-form">
             <!-- <b>Hostname or IP Address:</b> 
              <input id="host" type="text" name="host" value="34.67.161.xxx"><br> 
@@ -39,6 +39,7 @@
          <input type="hidden" id="port" name="port" value="9001">
          <input type="hidden" id="usr" name="usr" value="usr01">
          <input type="hidden" id="pwd" name="pwd" value="1234">
+         <input type="hidden" id="topic" name="topic" value="MQTTonWeb">
          <b>เชื่อมต่่า MQTT Server:</b>
          <input type="button" onclick="startConnect()" value="เชื่อมต่อ">
          <input type="button" onclick="startDisconnect()" value="ตัดการเชื่อมต่อ"><br><br>
@@ -52,7 +53,7 @@
          <br>
          <b>ค่าใหม่ :</b>
          <input id="new_val" type="text" name="new_val" value=""><br>
-         <input type="button" onclick="publish()" value="บันทึกค่าไปยังอุปกรณ์">
+         <input type="button" onclick="publish()" value="บันทึกค่าไปอุปกรณ์">
          </form>
          <div id="messages"></div>
       </div>
