@@ -75,9 +75,13 @@ function updateScroll() {
 
 function publish(){
 	//read data from form
-	pubMsg = document.getElementById("pubMsg").value;
-	pubTopic = document.getElementById("pubTopic").value;
-	
+	//pubMsg = document.getElementById("pubMsg").value;
+	//pubTopic = document.getElementById("pubTopic").value;
+    let msg1 = document.getElementById("set_param").value;
+    let msg2 = document.getElementById("new_val").value;
+    let pubMsg = msg1.concat("#", msg2);
+	let pubTopic = document.getElementById("deviceId").value;
+
 	//publish message
 	message = new Paho.MQTT.Message(pubMsg);
 	message.destinationName = pubTopic;
